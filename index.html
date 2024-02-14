@@ -1,0 +1,121 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('/Images/Nami.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  h1 {
+    color: #ff3eбс;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+
+  #yesBtn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  #noBtn {
+    background-color: #f44336;
+    color: white;
+  }
+
+  video {
+    display: none; 
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; 
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .message {
+    position: fixed;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    animation: zoomOut 3s ease forwards;
+    display: none;
+  }
+
+  @keyframes zoomOut {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Will You Be My Valentine?</h1>
+  <button id="yesBtn">Yes</button>
+  <button id="noBtn">No</button>
+</div>
+
+<video id="flowerVideo" autoplay muted loop>
+  <source src="" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="message" id="message">
+  <p>Flower for you my lady😚! Let's begin by me saying that I love you more than what this world can offer! I love you mi ❤️</p>
+</div>
+
+<script>
+  const yesBtn = document.getElementById('yesBtn');
+  const noBtn = document.getElementById('noBtn');
+  const flowerVideo = document.getElementById('flowerVideo');
+  const message = document.getElementById('message');
+
+  yesBtn.addEventListener('click', function() {
+    flowerVideo.src = '/Images/tulips.mp4'; // Replace 'your-video-file.mp4' with the path to your video file
+    flowerVideo.style.display = 'block'; // Show the video
+    flowerVideo.play(); // Play the video
+    setTimeout(function() {
+      message.style.display = 'block'; // Show the message
+    }, 10000); // Adjust the timeout value (in milliseconds) to control how long the flower blooms before showing the message
+  });
+
+  noBtn.addEventListener('click', function() {
+    alert("That's okay! Have a great day!");
+  });
+</script>
+
+</body>
+</html>

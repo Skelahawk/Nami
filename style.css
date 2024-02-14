@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url('/Pictures/Messenger/Nami.jpeg'); /*
+    Replace '/Pictures/Messenger/Nami.jpeg' with the path to your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.1); /*
+    Adjust the transparency as needed */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: #ff3ebc;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+#yesBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+#noBtn {
+  background-color: #f44336;
+  color: white;
+}
